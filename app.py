@@ -1,16 +1,15 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-import os,funciones,mysql.connector
+import funciones,mysql.connector
 from datetime import datetime
-from dotenv import load_dotenv
-load_dotenv()
+
 
 
 app = Flask(__name__)
-
-DB_HOST = os.getenv("DB_HOST")
-DB_USERNAME = os.getenv("DB_USERNAME")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_NAME = os.getenv("DATABASE")
+app.secret_key='my secret key'
+DB_HOST = 'bvgp2j3zwl97w1rbitly-mysql.services.clever-cloud.com'
+DB_USERNAME = 'ulnnjeupsxhgbqy7'
+DB_PASSWORD = 'U7dBZmVwYdOVg6ohYOqa'
+DB_NAME = 'bvgp2j3zwl97w1rbitly'
 
 
 # Connect to the database
